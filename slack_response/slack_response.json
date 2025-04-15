@@ -1,5 +1,1116 @@
 [
   {
+    "id": "b8336256-0ae3-405d-b107-75de058b8c77",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:55:38.326151+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"dag_name\": \"modern_slack_notification_dag\", \"error_message\": \"The subprocess module is not imported in your Python script, which is causing a NameError. To fix this issue, add an import statement at the top of your Python script: \nimport subprocess\nOr use the run() function from the subprocess module instead of calling it directly:\nfrom subprocess import run\n# ...\nresult = run(['date'], check=True)\n\"}"
+    }
+  },
+  {
+    "id": "08b14c73-5c0f-4a51-bd83-6ee9ad7ef55d",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:49:55.250359+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T06:49:45.029869+00:00",
+      "run_date": "2025-04-15 06:49:45.029869+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T06:49:45.029869+00:00*\n    Run Date: *2025-04-15 06:49:45.029869+00:00*\n    "
+    }
+  },
+  {
+    "id": "0550c744-939d-469a-9d7d-db2077566f42",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:49:32.383712+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "96414ab5-3bf1-41fa-9354-cb93bc77ae74",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:40:31.206151+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "84d8cb0b-9790-46c7-8713-dff9299e2086",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:29:20.241250+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"Error in modern_slack_notification_dag: The subprocess module is not imported in your Python script.\nFix: Add import statement at the top of your script (e.g. \u00b4import subprocess\u00b4)\nUpdated code snippet:\n\nimport subprocess\n\ndef print_date():\n    try:\n        subprocess.run([\"date\"], check=True)\n    except subprocess.CalledProcessError as e:\n        print(f\"Error: {e}\")\n\nprint_date()\"}"
+    }
+  },
+  {
+    "id": "e3560f02-6667-4fdd-932a-b17a371718ef",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:24:25.461510+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T06:24:13.240362+00:00",
+      "run_date": "2025-04-15 06:24:13.240362+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T06:24:13.240362+00:00*\n    Run Date: *2025-04-15 06:24:13.240362+00:00*\n    "
+    }
+  },
+  {
+    "id": "84f75bd8-3994-4f39-bc10-1f2e63125b9b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:12:38.006305+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "success",
+      "log_url": null,
+      "full_text": "{\"error\": \"The `subprocess` module is not imported in your Python script, which is causing a `NameError` when trying to use it. To fix this issue, you need to add an import statement for the `subprocess` module at the top of your script: \\n\\nimport subprocess\\n\\nAlternatively, if you are using Python 3.5 or later, you can also use the `run()` function from the `subprocess` module, which is a more modern and safer way to run external commands:\\n\\nfrom subprocess import run\\n\\nrun([\"date\"], check=True)\n\\nThis should fix the error and allow your script to run successfully.\"}"
+    }
+  },
+  {
+    "id": "9ad28680-3a1a-4a88-9f0a-50bc07e034fd",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T06:06:36.080129+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T06:06:25.938719+00:00",
+      "run_date": "2025-04-15 06:06:25.938719+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T06:06:25.938719+00:00*\n    Run Date: *2025-04-15 06:06:25.938719+00:00*\n    "
+    }
+  },
+  {
+    "id": "8c176ed8-4861-49a0-a0d1-b19eaca4895a",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:41:14.576473+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "Error in modern_slack_notification_dag: The error message indicates that there's a NameError exception being raised due to an undefined variable named subprocess. To fix this issue, add import subprocess at the beginning of your script."
+    }
+  },
+  {
+    "id": "839913bd-d201-4a44-b661-3a0a7312d57a",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:35:58.019783+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T05:35:45.378967+00:00",
+      "run_date": "2025-04-15 05:35:45.378967+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T05:35:45.378967+00:00*\n    Run Date: *2025-04-15 05:35:45.378967+00:00*\n    "
+    }
+  },
+  {
+    "id": "5083dfc5-b593-4808-a34d-bab6bb1a6a62",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:22:08.565742+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "Analysis: The error message indicates that the subprocess module is not imported in your Python script, which is causing a NameError. To fix this issue, you need to import the subprocess module at the top of your Python script and use either subprocess.run() or os.system()."
+    }
+  },
+  {
+    "id": "db49bcde-3572-4122-90a3-937ea614fe9d",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:16:25.070919+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T05:16:12.853701+00:00",
+      "run_date": "2025-04-15 05:16:12.853701+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T05:16:12.853701+00:00*\n    Run Date: *2025-04-15 05:16:12.853701+00:00*\n    "
+    }
+  },
+  {
+    "id": "4b777198-3b44-46b7-ad7a-88101b95024b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:12:11.262343+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T05:11:59.695913+00:00",
+      "run_date": "2025-04-15 05:11:59.695913+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T05:11:59.695913+00:00*\n    Run Date: *2025-04-15 05:11:59.695913+00:00*\n    "
+    }
+  },
+  {
+    "id": "dd9b2c27-45d6-4b05-aee3-d137f3fa2b04",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:10:22.248596+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "7e86a6d1-650b-4648-bd14-411cf22fddfb",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:10:20.555944+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T05:10:07.716318+00:00",
+      "run_date": "2025-04-15 05:10:07.716318+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T05:10:07.716318+00:00*\n    Run Date: *2025-04-15 05:10:07.716318+00:00*\n    "
+    }
+  },
+  {
+    "id": "a1eaece3-253d-45c6-aa12-67c466a894bf",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:09:43.280805+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": ""
+    }
+  },
+  {
+    "id": "0b2133be-25fd-4418-a253-bc51f506707a",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:09:17.553729+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "27936766-fa3f-4dc1-8696-27ed0156fbba",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T05:08:56.720495+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "3d37d691-8533-4996-bd1d-c9f0b4ae7b3e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T04:44:26.303478+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-15T04:44:08.842558+00:00",
+      "run_date": "2025-04-15 04:44:08.842558+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-15T04:44:08.842558+00:00*\n    Run Date: *2025-04-15 04:44:08.842558+00:00*\n    "
+    }
+  },
+  {
+    "id": "8616680d-75c3-4a9c-916a-ab773b903656",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T04:41:20.282658+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "eac6fcf2-647d-43e7-9949-7dd455451930",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T04:10:23.714997+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "31153c53-aaee-4906-9079-46539011e86b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-15T04:03:43.011773+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "scheduled__2025-04-14T00:00:00+00:00",
+      "run_date": "2025-04-14 00:00:00+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *scheduled__2025-04-14T00:00:00+00:00*\n    Run Date: *2025-04-14 00:00:00+00:00*\n    "
+    }
+  },
+  {
+    "id": "f4d46a89-f498-49d4-93ee-763e90ca0b45",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T08:46:25.329735+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T08:46:08.388988+00:00",
+      "run_date": "2025-04-14 08:46:08.388988+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T08:46:08.388988+00:00*\n    Run Date: *2025-04-14 08:46:08.388988+00:00*\n    "
+    }
+  },
+  {
+    "id": "7249b934-65a2-4602-92ca-853b01688336",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T08:45:51.444871+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "98606ad8-c588-41d8-9fdc-01a11b9fa0f3",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T07:09:04.336035+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T07:08:52.373746+00:00",
+      "run_date": "2025-04-14 07:08:52.373746+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T07:08:52.373746+00:00*\n    Run Date: *2025-04-14 07:08:52.373746+00:00*\n    "
+    }
+  },
+  {
+    "id": "55c2e0ac-00f2-4ad3-9cfa-963fa296b948",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T07:08:48.133689+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "09323e58-5648-4059-bfbe-b0a51e11e4b9",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:59:24.643470+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T06:59:10.038555+00:00",
+      "run_date": "2025-04-14 06:59:10.038555+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T06:59:10.038555+00:00*\n    Run Date: *2025-04-14 06:59:10.038555+00:00*\n    "
+    }
+  },
+  {
+    "id": "cd89a73f-d991-4e93-9d77-f65951f2434e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:46:38.878094+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T06:46:27.131014+00:00",
+      "run_date": "2025-04-14 06:46:27.131014+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T06:46:27.131014+00:00*\n    Run Date: *2025-04-14 06:46:27.131014+00:00*\n    "
+    }
+  },
+  {
+    "id": "ca2ea509-83b3-47e6-bbaa-6324834f0ba7",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:46:18.972701+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "0f718337-0720-41b4-bcf8-0f8f64ddf8f3",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:44:16.247831+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": null,
+      "run_date": "2025-04-14 06:44:05.443601+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T06:44:05.443601+00:00*\n    Run Date: *2025-04-14 06:44:05.443601+00:00*\n    "
+    }
+  },
+  {
+    "id": "4b5bf01c-e863-4141-97a7-de316b34f2de",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:42:38.880107+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-14 06:42:26.232347+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T06:42:26.232347+00:00*\n    Run Date: *2025-04-14 06:42:26.232347+00:00*\n    "
+    }
+  },
+  {
+    "id": "e1a9249d-04e1-4848-92c1-34afa7bad0fd",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:42:00.881631+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "786b3fd1-42e2-4ff6-88d7-75a4c988242b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:40:10.220437+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "run_id": null,
+      "run_date": "2025-04-14",
+      "status": "success",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!  \n    DAG: *debug_slack_notifier*  \n    Run Date: *2025-04-14*  \n    State: *success* :tada:\n    "
+    }
+  },
+  {
+    "id": "0557b3cf-f0f3-4bb8-a606-0fda357adb58",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:33:58.632937+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-14",
+      "status": "failed",
+      "full_text": "\n    :red_circle: Task *always_fail_task* failed!  \n    DAG: *debug_slack_notifier*  \n    Run Date: *2025-04-14*  \n    State: *failed* :boom:  \n    *Log URL:* <http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-14T06%3A33%3A32.660703%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-14T06%3A33%3A32%2B0000&amp;tab=logs>\n    "
+    }
+  },
+  {
+    "id": "64f9fe97-1de6-408c-ab4e-16c2daea69c1",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T06:33:46.738304+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-14",
+      "status": "success",
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!  \n    DAG: *debug_slack_notifier*  \n    Run Date: *2025-04-14*  \n    State: *success* :tada:\n    "
+    }
+  },
+  {
+    "id": "b6a3fdd1-1199-4160-8fb1-a1b714cc3ebe",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:53:56.897035+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-14",
+      "status": "success",
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!  \n    DAG: *debug_slack_notifier*  \n    Run Date: *2025-04-14*  \n    State: *success* :tada:\n    "
+    }
+  },
+  {
+    "id": "fda797e9-2773-409c-8f91-eb7d362f37ad",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:51:31.038485+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-14",
+      "status": "success",
+      "full_text": "\n    :white_check_mark: Task *sleep_task* succeeded!  \n    DAG: *print_date_time*  \n    Run Date: *2025-04-14*  \n    State: *success* :tada:\n    "
+    }
+  },
+  {
+    "id": "c4d14a76-afec-44bc-a4a1-5c9b812c0e05",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:51:28.101003+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-13",
+      "status": "success",
+      "full_text": "\n    :white_check_mark: Task *sleep_task* succeeded!  \n    DAG: *print_date_time*  \n    Run Date: *2025-04-13*  \n    State: *success* :tada:\n    "
+    }
+  },
+  {
+    "id": "10fb7ffe-ebab-4296-97af-bc1c86073754",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:51:19.371545+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-14",
+      "status": "failed",
+      "full_text": "\n    :red_circle: Task *print_date* failed!  \n    DAG: *print_date_time*  \n    Run Date: *2025-04-14*  \n    State: *success* :boom:  \n    *Log URL:* <http://localhost:8080/dags/print_date_time/grid?dag_run_id=manual__2025-04-14T05%3A50%3A56.548477%2B00%3A00&amp;task_id=print_date&amp;base_date=2025-04-14T05%3A50%3A56%2B0000&amp;tab=logs>\n    "
+    }
+  },
+  {
+    "id": "9ac3bc43-e550-47c8-a5ef-e01bc3c1bcf7",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:51:16.335428+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": "2025-04-13",
+      "status": "failed",
+      "full_text": "\n    :red_circle: Task *print_date* failed!  \n    DAG: *print_date_time*  \n    Run Date: *2025-04-13*  \n    State: *success* :boom:  \n    *Log URL:* <http://localhost:8080/dags/print_date_time/grid?dag_run_id=scheduled__2025-04-13T00%3A00%3A00%2B00%3A00&amp;task_id=print_date&amp;base_date=2025-04-13T00%3A00%3A00%2B0000&amp;tab=logs>\n    "
+    }
+  },
+  {
+    "id": "d1b415a7-45e0-48e1-a8d4-555960c2cf1c",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:49:43.324740+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:49:29.208056+00:00",
+      "run_date": "2025-04-14 05:49:29.208056+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:49:29.208056+00:00*\n    Run Date: *2025-04-14 05:49:29.208056+00:00*\n    "
+    }
+  },
+  {
+    "id": "8bc5bd6b-a9f2-4d0d-80fe-613f9aa2aea6",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:47:09.611704+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:46:53.750071+00:00",
+      "run_date": "2025-04-14 05:46:53.750071+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:46:53.750071+00:00*\n    Run Date: *2025-04-14 05:46:53.750071+00:00*\n    "
+    }
+  },
+  {
+    "id": "79f68563-81a3-4734-bd65-c2da9b6a3337",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:46:40.950743+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "c352cb19-1720-4f3f-9756-3f074e9b7ede",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:45:59.272282+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "gii"
+    }
+  },
+  {
+    "id": "5d5f21e3-cdd0-49b0-baec-d214dba68ea6",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:42:52.000731+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:36:28.466684+00:00",
+      "run_date": "2025-04-14 05:36:28.466684+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:36:28.466684+00:00*\n    Run Date: *2025-04-14 05:36:28.466684+00:00*\n    "
+    }
+  },
+  {
+    "id": "bdc9e5c5-d530-4d02-a0cb-1dfd670e6b59",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:37:48.333370+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:36:28.466684+00:00",
+      "run_date": "2025-04-14 05:36:28.466684+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:36:28.466684+00:00*\n    Run Date: *2025-04-14 05:36:28.466684+00:00*\n    "
+    }
+  },
+  {
+    "id": "5fbc7035-0327-4d28-80df-96a9016c4a05",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:36:44.040788+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:36:28.466684+00:00",
+      "run_date": "2025-04-14 05:36:28.466684+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:36:28.466684+00:00*\n    Run Date: *2025-04-14 05:36:28.466684+00:00*\n    "
+    }
+  },
+  {
+    "id": "05b44d76-3ec4-4ebf-99c8-fffba86645d9",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:36:40.305377+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:36:28.466684+00:00",
+      "run_date": "2025-04-14 05:36:28.466684+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:36:28.466684+00:00*\n    Run Date: *2025-04-14 05:36:28.466684+00:00*\n    "
+    }
+  },
+  {
+    "id": "b423af1a-be21-4fa7-a572-ffa5806e3c79",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:36:20.697137+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "750b1619-aed7-4d2f-baff-eac7ceb79d7e",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:35:05.704552+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "c355b5be-b3b2-4562-b5f2-e556a4557dbb",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:33:36.089167+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "5941d7ad-8e83-436e-827a-0d92c8f594b3",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:27:03.783382+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:20:36.804619+00:00",
+      "run_date": "2025-04-14 05:20:36.804619+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:20:36.804619+00:00*\n    Run Date: *2025-04-14 05:20:36.804619+00:00*\n    "
+    }
+  },
+  {
+    "id": "f76e3fad-a01a-42c5-b19a-11e2b36f2a05",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:22:00.024653+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:20:36.804619+00:00",
+      "run_date": "2025-04-14 05:20:36.804619+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:20:36.804619+00:00*\n    Run Date: *2025-04-14 05:20:36.804619+00:00*\n    "
+    }
+  },
+  {
+    "id": "79959b26-3253-49a9-a391-cf8983db727c",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:20:56.680509+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:20:36.804619+00:00",
+      "run_date": "2025-04-14 05:20:36.804619+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:20:36.804619+00:00*\n    Run Date: *2025-04-14 05:20:36.804619+00:00*\n    "
+    }
+  },
+  {
+    "id": "1ee5f4f7-9376-433d-bd30-b73b7d553767",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:20:53.288549+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:20:36.804619+00:00",
+      "run_date": "2025-04-14 05:20:36.804619+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:20:36.804619+00:00*\n    Run Date: *2025-04-14 05:20:36.804619+00:00*\n    "
+    }
+  },
+  {
+    "id": "516cee3b-6d46-48c6-9bf7-783eac7e77db",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:20:29.765822+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "81e08895-34cb-4116-ad0e-180db7b7f306",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:15:55.334422+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:09:28.083792+00:00",
+      "run_date": "2025-04-14 05:09:28.083792+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:09:28.083792+00:00*\n    Run Date: *2025-04-14 05:09:28.083792+00:00*\n    "
+    }
+  },
+  {
+    "id": "72a6821a-5b14-4300-a57c-557a7634215a",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:10:51.950149+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:09:28.083792+00:00",
+      "run_date": "2025-04-14 05:09:28.083792+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:09:28.083792+00:00*\n    Run Date: *2025-04-14 05:09:28.083792+00:00*\n    "
+    }
+  },
+  {
+    "id": "c7bf0f2c-9c94-407f-b0e5-113ff0ea331d",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:09:48.579808+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:09:28.083792+00:00",
+      "run_date": "2025-04-14 05:09:28.083792+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:09:28.083792+00:00*\n    Run Date: *2025-04-14 05:09:28.083792+00:00*\n    "
+    }
+  },
+  {
+    "id": "feb6e2f3-35cd-45b8-847b-f6572afcf400",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T05:09:45.324235+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T05:09:28.083792+00:00",
+      "run_date": "2025-04-14 05:09:28.083792+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T05:09:28.083792+00:00*\n    Run Date: *2025-04-14 05:09:28.083792+00:00*\n    "
+    }
+  },
+  {
+    "id": "2d4f96ce-faae-45ec-8383-a0d12296465c",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:22:48.126441+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:16:23.390985+00:00",
+      "run_date": "2025-04-14 04:16:23.390985+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:16:23.390985+00:00*\n    Run Date: *2025-04-14 04:16:23.390985+00:00*\n    "
+    }
+  },
+  {
+    "id": "d2a72d45-61ed-4012-9f84-cb2ff0f9eee1",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:19:30.125097+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "af7fc8d5-e381-4cc9-819e-30c45d0f6ee9",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:18:45.233533+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "2d277bec-afa9-435c-9c1a-b770dbc4d183",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:18:00.220962+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:11:37.770477+00:00",
+      "run_date": "2025-04-14 04:11:37.770477+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:11:37.770477+00:00*\n    Run Date: *2025-04-14 04:11:37.770477+00:00*\n    "
+    }
+  },
+  {
+    "id": "538d9e89-e9cb-4498-a4f1-600af7afbdf1",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:17:44.522875+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:16:23.390985+00:00",
+      "run_date": "2025-04-14 04:16:23.390985+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:16:23.390985+00:00*\n    Run Date: *2025-04-14 04:16:23.390985+00:00*\n    "
+    }
+  },
+  {
+    "id": "fd6503be-4a4a-48f7-acbf-f01668eab7d5",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:16:40.207537+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:16:23.390985+00:00",
+      "run_date": "2025-04-14 04:16:23.390985+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:16:23.390985+00:00*\n    Run Date: *2025-04-14 04:16:23.390985+00:00*\n    "
+    }
+  },
+  {
+    "id": "eb8185a0-2203-4f41-a12f-d0d2dfc2695e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:16:36.829931+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:16:23.390985+00:00",
+      "run_date": "2025-04-14 04:16:23.390985+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:16:23.390985+00:00*\n    Run Date: *2025-04-14 04:16:23.390985+00:00*\n    "
+    }
+  },
+  {
+    "id": "1e9a54d5-e702-485f-b15e-6cadf06f8ca8",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:16:22.101910+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "7bb91a00-f743-4e0b-9290-0855a6608584",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:12:57.094499+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:11:37.770477+00:00",
+      "run_date": "2025-04-14 04:11:37.770477+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:11:37.770477+00:00*\n    Run Date: *2025-04-14 04:11:37.770477+00:00*\n    "
+    }
+  },
+  {
+    "id": "8d57c649-c1d4-4056-8426-c76bf08c05fd",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:11:54.077074+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:11:37.770477+00:00",
+      "run_date": "2025-04-14 04:11:37.770477+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:11:37.770477+00:00*\n    Run Date: *2025-04-14 04:11:37.770477+00:00*\n    "
+    }
+  },
+  {
+    "id": "349fed5c-036b-4f7b-8781-2a59028d0baf",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:11:50.440946+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:11:37.770477+00:00",
+      "run_date": "2025-04-14 04:11:37.770477+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:11:37.770477+00:00*\n    Run Date: *2025-04-14 04:11:37.770477+00:00*\n    "
+    }
+  },
+  {
+    "id": "798b9048-b979-47a3-bae1-8b40e021348e",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:11:35.565909+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "b04edbef-89fd-4c2c-bfd1-e29fb3151224",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:05:15.522063+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:03:45.451156+00:00",
+      "run_date": "2025-04-14 04:03:45.451156+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:03:45.451156+00:00*\n    Run Date: *2025-04-14 04:03:45.451156+00:00*\n    "
+    }
+  },
+  {
+    "id": "9b034e60-2f62-4856-834f-3f9279dd6a5e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:04:11.559614+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:03:45.451156+00:00",
+      "run_date": "2025-04-14 04:03:45.451156+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:03:45.451156+00:00*\n    Run Date: *2025-04-14 04:03:45.451156+00:00*\n    "
+    }
+  },
+  {
+    "id": "53f10847-abef-4c63-b35c-47106076a084",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:04:07.805641+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-14T04:03:45.451156+00:00",
+      "run_date": "2025-04-14 04:03:45.451156+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-14T04:03:45.451156+00:00*\n    Run Date: *2025-04-14 04:03:45.451156+00:00*\n    "
+    }
+  },
+  {
+    "id": "0bf056b4-e9a1-4e44-87ef-2fa518160369",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T04:00:54.661012+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "77d2d7df-94c6-47fb-838a-47fee9885d02",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-14T03:59:54.591765+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "unknown",
+      "full_text": "hii"
+    }
+  },
+  {
     "id": "cfb27399-bcde-49dc-8774-4b17b902cca2",
     "user": "U08MVBRBM9S",
     "channel": "C08MAV0NK71",

@@ -9,18 +9,18 @@ import logging
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import JSONResponse, PlainTextResponse
 from dotenv import load_dotenv
-from agent import agent
+from agent_handler.agent import agent
 from pydantic import BaseModel
 import asyncio
 from parse_slack_event.slack_parser import parse_slack_text  # Import the function
 import uuid
-from datetime import datetime, timezone
-
+import queue  # Import the queue module
+from threading import Thread  # Import the Thread module
 
 load_dotenv()
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')  # Corrected logging format
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
@@ -30,6 +30,11 @@ SLACK_SIGNING_SECRET = os.getenv("SLACK_SIGNING_SECRET")
 SLACK_RESPONSE_FILE = "slack_response/slack_response.json"  # Define the file path
 AGENT_RESPONSE_FILE = "agent_response/agent_response.json"  # Define the agent response file path
 
+# In-memory set to store processed timestamps (for duplicate detection within session)
+processed_timestamps = set()
+
+# Queue for asynchronous event processing
+event_queue = queue.Queue()
 
 def load_existing_events(filename: str) -> List[Dict]:
     """Loads existing events from the JSON file."""
@@ -43,8 +48,7 @@ def load_existing_events(filename: str) -> List[Dict]:
         logger.error(f"Error loading existing events from {filename}: {e}")
         return []
 
-
-def save_as_json(events: List[Dict], filename: str):
+def save_events(events: List[Dict], filename: str):
     """Saves the list of events to the JSON file."""
     try:
         with open(filename, "w") as f:
@@ -53,6 +57,54 @@ def save_as_json(events: List[Dict], filename: str):
     except Exception as e:
         logger.error(f"Error saving events to {filename}: {e}")
 
+# Function to process events from the queue
+def process_event(event_data: Dict):
+    try:
+        text = event_data.get("text")
+        timestamp = event_data.get("timestamp")
+
+        parsed_text = parse_slack_text(text)  # Parse the text using the imported function
+        event_data["text_details"] = parsed_text
+
+        print("🟢 Processing Slack Message:")
+        print(json.dumps(event_data, indent=2))
+
+        # ✅ Check if the message indicates a DAG failure
+        if event_data["text_details"]["status"] == "failed":
+            print("hhhhhhhhhhhhhhh")
+            # Extract the DAG name using regex
+            dag_name = event_data["text_details"].get("dag_name")  # Get dag name from parsed data
+
+            if dag_name:
+                logger.info(f"DAG failure detected for DAG: {dag_name}")
+
+                # Call the agent to fetch logs (using asyncio.to_thread to avoid blocking)
+                try:
+                    response = asyncio.run(asyncio.to_thread(agent, f"fetch logs for dag {dag_name}"))  # Run async in sync context
+                    logger.info(f"Agent response: {response}")
+
+                    # Store the agent response
+                    agent_response_data = {
+                        "id": str(uuid.uuid4()),
+                        "dag_name": dag_name,
+                        "timestamp": time.time(),
+                        "response": response
+                    }
+
+                    existing_agent_responses = load_existing_events(AGENT_RESPONSE_FILE)
+                    if not isinstance(existing_agent_responses, list):
+                        existing_agent_responses = [existing_agent_responses]
+                    existing_agent_responses.insert(0, agent_response_data)
+                    save_events(existing_agent_responses, AGENT_RESPONSE_FILE)
+
+                    # TODO:  Potentially post the response back to the Slack channel
+
+                except Exception as e:
+                    logger.error(f"Error calling agent: {e}")
+                    response = f"Error fetching logs: {e}"  # Provide an error message
+
+    except Exception as e:
+        logger.error(f"Error processing event: {e}")
 
 @app.post("/slack/events")
 async def slack_events(request: Request):
@@ -82,70 +134,36 @@ async def slack_events(request: Request):
         timestamp = event.get("ts")
         subtype = event.get("subtype", "user")
 
-        parsed_text = parse_slack_text(text)  # Parse the text using the imported function
+        # ✅ Check for retry headers
+        retry_num = headers.get("X-Slack-Retry-Num")
+        retry_reason = headers.get("X-Slack-Retry-Reason")
+        if retry_num:
+            logger.warning(f"Received retry attempt {retry_num} with reason: {retry_reason}")
+
+        # ✅ Check if the message has already been processed (in-memory)
+        if timestamp in processed_timestamps:
+            logger.info(f"Duplicate message detected with timestamp: {timestamp}. Skipping.")
+            return JSONResponse(content={"status": "ok", "message": "Duplicate message. Skipped."})
+
+        # Add the timestamp to the set of processed timestamps
+        processed_timestamps.add(timestamp)
 
         message_data = {
             "id": str(uuid.uuid4()),  # Generate a unique ID
             "user": user,
             "channel": channel,
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "timestamp": timestamp,
             "subtype": subtype,
-            "text_details": parsed_text
+            "text": text  # Store the original text here
         }
 
-        print("Incoming Slack Message:")
-        print(json.dumps(message_data, indent=2))
+        # Put the event data into the queue for asynchronous processing
+        event_queue.put(message_data)
 
-        # Load existing events, add the new event at the beginning, and save
-        existing_events = load_existing_events(SLACK_RESPONSE_FILE)
-        if not isinstance(existing_events, list):
-            existing_events = [existing_events]  # Ensure it's a list
-        existing_events.insert(0, message_data)  # Add to the beginning
-        save_as_json(existing_events, SLACK_RESPONSE_FILE)
+        # Immediately return a 200 OK response to Slack
+        return JSONResponse(content={"status": "ok", "message": "Event received and queued for processing."})
 
-        # ✅ Check if the message indicates a DAG failure
-        if message_data["text_details"]["status"] == "failed":
-            # Extract the DAG name using regex
-            dag_name = message_data["text_details"].get("dag_name")  # Get dag name from parsed data
-
-            if dag_name:
-                logger.info(f"DAG failure detected for DAG: {dag_name}")
-
-                # Call the agent to fetch logs (using asyncio.to_thread to avoid blocking)
-                try:
-                    response = await asyncio.to_thread(agent, f"fetch logs for dag {dag_name}")
-                    logger.info(f"Agent response: {response}")
-
-                    # Store the agent response
-                    agent_response_data = {
-                        "id": str(uuid.uuid4()),
-                        "dag_name": dag_name,
-                        "timestamp": datetime.now(timezone.utc).isoformat(),
-                        "response": response
-                    }
-
-                    existing_agent_responses = load_existing_events(AGENT_RESPONSE_FILE)
-                    if not isinstance(existing_agent_responses, list):
-                        existing_agent_responses = [existing_agent_responses]
-                    existing_agent_responses.insert(0, agent_response_data)
-                    save_as_json(existing_agent_responses, AGENT_RESPONSE_FILE)
-
-                    # TODO:  Potentially post the response back to the Slack channel
-
-                except Exception as e:
-                    logger.error(f"Error calling agent: {e}")
-                    response = f"Error fetching logs: {e}"  # Provide an error message
-
-            # Return a response to Slack (can be improved to post the logs)
-            return JSONResponse(
-                content={"status": "ok",
-                         "message": f"DAG failure detected.  Attempted to fetch logs for {dag_name}. Check logs and {AGENT_RESPONSE_FILE} for agent response."})
-
-        # You can process/save the message here if needed
-        # For example: store to DB, send to webhook, etc.
-
-        return JSONResponse(content={"status": "ok"})
-
+    return JSONResponse(content={"status": "ok"})
 
 def write_json_to_file(data: dict, filename: str):
     """Writes JSON data to a file."""
@@ -154,7 +172,6 @@ def write_json_to_file(data: dict, filename: str):
             json.dump(data, f, indent=2)
     except Exception as e:
         logger.error(f"Error writing to file in separate thread: {e}")
-
 
 def verify_slack_signature(headers: Dict[str, str], raw_body: bytes) -> bool:
     slack_signature = headers.get("X-Slack-Signature")
@@ -181,10 +198,8 @@ def verify_slack_signature(headers: Dict[str, str], raw_body: bytes) -> bool:
 
     return hmac.compare_digest(my_signature, slack_signature)
 
-
 class QueryRequest(BaseModel):
     query: str
-
 
 @app.post("/query")
 async def handle_query(request: QueryRequest):
@@ -194,6 +209,19 @@ async def handle_query(request: QueryRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# Start the event processing thread
+def start_event_processor():
+    while True:
+        try:
+            event_data = event_queue.get()
+            process_event(event_data)
+            event_queue.task_done()
+        except Exception as e:
+            logger.error(f"Error in event processing thread: {e}")
+            time.sleep(1)  # Add a small delay to prevent busy-looping
+
+event_processing_thread = Thread(target=start_event_processor, daemon=True)
+event_processing_thread.start()
 
 # Run with: python main.py
 if __name__ == "__main__":

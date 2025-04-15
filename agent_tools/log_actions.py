@@ -11,11 +11,6 @@ AIRFLOW_URL = "http://localhost:8080"
 USERNAME = "airflow"
 PASSWORD = "airflow"
 
-# Define the directory to save the JSON file
-OUTPUT_DIR = "logs/output"
-OUTPUT_FILE = "agent_output.json"
-
-
 def fetch_dags() -> list:
     url = f"{AIRFLOW_URL}/api/v1/dags"
     try:
@@ -83,17 +78,6 @@ def fetch_logs_for_dag(dag_id: str) -> dict:
         return {}
 
 
-def save_output_to_json(data: dict, directory: str, filename: str) -> None:
-    # Create the directory if it doesn't exist
-    os.makedirs(directory, exist_ok=True)
-    # Define the full path for the output file
-    file_path = os.path.join(directory, filename)
-    # Write the data to a JSON file
-    with open(file_path, "w") as json_file:
-        json.dump(data, json_file, indent=4)
-    print(f"Data saved to {file_path}")
-
-
 # Example usage
 if __name__ == "__main__":
     dags = fetch_dags()
@@ -103,7 +87,5 @@ if __name__ == "__main__":
         logs = fetch_logs_for_dag(dag_id)
         print(f"Logs for DAG ID '{dag_id}':", logs)
 
-        # Save the logs to a JSON file
-        save_output_to_json(logs, OUTPUT_DIR, OUTPUT_FILE)
     else:
         print("No DAGs fetched. Exiting.")

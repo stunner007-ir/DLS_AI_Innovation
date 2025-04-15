@@ -1,8 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+from agent_handler.agent import agent
 
-# This should import the actual logic
-from agent import agent
 
 handle_query = APIRouter()
 
