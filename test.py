@@ -50,7 +50,7 @@ async def slack_events(request: Request):
         timestamp = event.get("ts")
         subtype = event.get("subtype", "user")
 
-        print("🟢 Incoming Slack Message:")
+        print("Incoming Slack Message:")
         print(json.dumps({
             "user": user,
             "text": text,

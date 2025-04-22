@@ -1,5 +1,1217 @@
 [
   {
+    "id": "5255144e-deda-41e9-90db-39fa50692e5f",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T06:29:01.718231+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in DAG 'modern_slack_notification_dag': subprocess module not imported in Python script. Please add import statement at the top of your script: import subprocess or use subprocess.run() function.",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "28b24655-5840-4b01-90ba-4b959a4b44a1",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T06:21:55.226221+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T06:21:43.836632+00:00",
+      "run_date": "2025-04-22 06:21:43.836632+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T06:21:43.836632+00:00*\n    Run Date: *2025-04-22 06:21:43.836632+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "33cf9c2c-3252-44a9-a634-8b82185eb902",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T05:44:13.652647+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in DAG 'debug_slack_notifier': Custom task 'always_fail_task' raises exception but doesn't handle it properly. Consider catching the exception and returning an error code, using a custom exception handler, or implementing a retry mechanism.",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "400091dc-fe5e-42ed-932a-238375aac5c6",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T05:38:24.580727+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-22 05:38:14 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-22 05:38:14 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "ba033c4e-7070-48b7-be50-7cdf6eaab858",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T05:37:52.517556+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in DAG 'modern_slack_notification_dag': subprocess module not imported in Python script. Please import it at the top of your script or use subprocess.run with capture_output=True and text=True.",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "e6f86e68-32d3-46f2-be10-25913714d4c2",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T05:31:33.660047+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T05:31:20.552247+00:00",
+      "run_date": "2025-04-22 05:31:20.552247+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T05:31:20.552247+00:00*\n    Run Date: *2025-04-22 05:31:20.552247+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "2ddc6e59-e02d-4c7c-b0e2-015f57a05e93",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T05:08:15.398697+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T05:08:04.590332+00:00",
+      "run_date": "2025-04-22 05:08:04.590332+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T05:08:04.590332+00:00*\n    Run Date: *2025-04-22 05:08:04.590332+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "1d76df54-9fbc-49c8-8c7f-e3d92f91f459",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T05:03:23.197243+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in DAG 'modern_slack_notification_dag': NameError: 'subprocess' is not defined. Consider adding an import statement at the top of your Python script, e.g. 'import subprocess'. Alternatively, use subprocess.run() for Python 3.5 or later.",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "c492bac7-8685-4dfc-a9d5-a4fba7c731b4",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T04:53:21.448729+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T04:53:04.676416+00:00",
+      "run_date": "2025-04-22 04:53:04.676416+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T04:53:04.676416+00:00*\n    Run Date: *2025-04-22 04:53:04.676416+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "589fb263-6ddf-4560-8bd8-c259284116ff",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T04:52:14.590606+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T04:52:03.172162+00:00",
+      "run_date": "2025-04-22 04:52:03.172162+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T04:52:03.172162+00:00*\n    Run Date: *2025-04-22 04:52:03.172162+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "3be3b201-2ca8-4e79-b9a5-4403b2fe6f6c",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T04:43:21.998338+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T04:43:09.536212+00:00",
+      "run_date": "2025-04-22 04:43:09.536212+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T04:43:09.536212+00:00*\n    Run Date: *2025-04-22 04:43:09.536212+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "f5d5e6bd-2da6-4a2b-9e23-14b844025e19",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T04:29:25.338048+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-22T04:28:50.390881+00:00",
+      "run_date": "2025-04-22 04:28:50.390881+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-22T04:28:50.390881+00:00*\n    Run Date: *2025-04-22 04:28:50.390881+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "e678f4d5-e665-4486-aae7-9e860cf59d20",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-22T04:25:53.213433+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "scheduled__2025-04-21T00:00:00+00:00",
+      "run_date": "2025-04-21 00:00:00+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *scheduled__2025-04-21T00:00:00+00:00*\n    Run Date: *2025-04-21 00:00:00+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "2609891c-e3db-40cb-8c36-5b17291bcbc2",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T06:38:43.005860+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-21T06:38:29.548206+00:00",
+      "run_date": "2025-04-21 06:38:29.548206+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-21T06:38:29.548206+00:00*\n    Run Date: *2025-04-21 06:38:29.548206+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "76ad27bc-d508-42f1-a874-c01fd3944275",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T06:21:30.221548+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-21T06:21:17.414614+00:00",
+      "run_date": "2025-04-21 06:21:17.414614+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-21T06:21:17.414614+00:00*\n    Run Date: *2025-04-21 06:21:17.414614+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "02097685-829d-4a84-9899-d9a23b4bf756",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:57:36.305082+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-21 05:57:26 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-21 05:57:26 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "a14c43c1-e3e3-4dc7-ab6a-572c86c6738c",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:50:31.463509+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in debug_slack_notifier DAG: always_fail_task function raises runtime exception without error handling or retries. Consider adding try-except block or retry mechanism to handle exceptions and prevent task failure.",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "4e3fd50e-32e9-46fa-90cf-147b2cf4adab",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:44:08.411153+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-21 05:43:59 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-21 05:43:59 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "cc4bbc97-7d14-4e70-a202-d44c4292ea56",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:36:34.711018+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-21 05:36:21 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-21 05:36:21 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "e84ef3cc-dd28-48e3-9c90-46b2187acc57",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:30:29.114044+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in modern_slack_notification_dag: subprocess module not imported. Add import statement at top of script: \nimport subprocess\n\ndef print_date():\n    subprocess.run(['date'], check=True)",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "61321988-9f51-4c3d-aff5-f16cb6a6c06c",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:24:08.706054+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-21T05:23:57.083472+00:00",
+      "run_date": "2025-04-21 05:23:57.083472+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-21T05:23:57.083472+00:00*\n    Run Date: *2025-04-21 05:23:57.083472+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "2840b68a-303a-463a-a8a1-24f6c5f3f47b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T05:03:16.100432+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-21T05:03:04.774409+00:00",
+      "run_date": "2025-04-21 05:03:04.774409+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-21T05:03:04.774409+00:00*\n    Run Date: *2025-04-21 05:03:04.774409+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "2c7d71e3-2345-405d-8877-f0bc3175eab7",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-21T04:54:28.136259+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-21T04:54:11.428896+00:00",
+      "run_date": "2025-04-21 04:54:11.428896+00:00",
+      "status": "failed",
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-21T04:54:11.428896+00:00*\n    Run Date: *2025-04-21 04:54:11.428896+00:00*\n    ",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "493a634e-53e4-415d-842e-3d80e473dd03",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:31:42.321218+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": "always_fail_task",
+      "run_date": "2025-04-17 08:31:29 UTC",
+      "status": "failed",
+      "log_url": "http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A31%3A29.655957%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A31%3A29%2B0000&amp;tab=logs*",
+      "full_text": "\n    :red_circle: Task *always_fail_task* failed!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:31:29 UTC*\n    State: *failed* :boom:\n    Log URL:*<http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A31%3A29.655957%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A31%3A29%2B0000&amp;tab=logs*>\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "57ebc5bd-dfa6-4644-b028-002fb757c4c7",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:31:36.741537+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:31:29 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:31:29 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "f32e06a0-e263-4d44-96e1-ddebf0cb00bc",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:30:54.548648+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": "always_fail_task",
+      "run_date": "2025-04-17 08:30:40 UTC",
+      "status": "failed",
+      "log_url": "http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A30%3A40.596885%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A30%3A40%2B0000&amp;tab=logs*",
+      "full_text": "\n    :red_circle: Task *always_fail_task* failed!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:30:40 UTC*\n    State: *failed* :boom:\n    Log URL:*<http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A30%3A40.596885%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A30%3A40%2B0000&amp;tab=logs*>\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "4c6d3116-2244-407b-aded-72b550f3f68a",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:30:48.676792+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:30:40 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:30:40 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "324805db-f90f-4d0a-b6e1-bab86ea9aa22",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:20:11.083714+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": "always_fail_task",
+      "run_date": "2025-04-17 08:19:54 UTC",
+      "status": "failed",
+      "log_url": "http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A19%3A54.458222%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A19%3A54%2B0000&amp;tab=logs*",
+      "full_text": "\n    :red_circle: Task *always_fail_task* failed!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:19:54 UTC*\n    State: *failed* :boom:\n    Log URL:*<http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A19%3A54.458222%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A19%3A54%2B0000&amp;tab=logs*>\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "618e16df-d646-4294-b439-2b423d21750e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:20:02.715457+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:19:54 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:19:54 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "05d38b19-24c6-4ead-a403-3a2ebb8784ac",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:16:07.572571+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": "always_fail_task",
+      "run_date": "2025-04-17 08:15:53 UTC",
+      "status": "failed",
+      "log_url": "http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A15%3A53.748872%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A15%3A53%2B0000&amp;tab=logs*",
+      "full_text": "\n    :red_circle: Task *always_fail_task* failed!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:15:53 UTC*\n    State: *failed* :boom:\n    Log URL:*<http://localhost:8080/dags/debug_slack_notifier/grid?dag_run_id=manual__2025-04-17T08%3A15%3A53.748872%2B00%3A00&amp;task_id=always_fail_task&amp;base_date=2025-04-17T08%3A15%3A53%2B0000&amp;tab=logs*>\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "2f89a5a7-f0a6-485f-ab66-f035587259c1",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:16:01.402256+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:15:53 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:15:53 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "34141435-180b-4877-928c-7cada694ce14",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:14:16.514660+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:14:07 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:14:07 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "ee49836c-7b78-440b-9bf1-d23fe8ceb70b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:12:47.376326+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:12:39 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:12:39 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "2aba05e5-f74f-43ae-933d-65dfdcaf27f4",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T08:11:23.214251+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 08:11:16 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 08:11:16 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "40fddde2-68ba-49a5-bab9-dacfe6e07911",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T07:06:46.764603+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": "failed",
+      "full_text": "Error in DAG debug_slack_notifier: Python script execution and return value are not logged. Add logging statements to capture more information about script execution and return value. Callback function execution without context. Review Python script, add logging, and investigate callback function execution.",
+      "type": "dag_failure"
+    }
+  },
+  {
+    "id": "2ef9b079-a210-4474-96ed-d5b75abc7b09",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T07:02:13.754506+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "task_name": null,
+      "run_date": "2025-04-17 07:02:05 UTC",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!\n    DAG: *debug_slack_notifier*\n    Run Date: *2025-04-17 07:02:05 UTC*\n    State: *success* :tada:\n    ",
+      "type": "task_failure"
+    }
+  },
+  {
+    "id": "0ad9a72e-6f77-4037-a5c3-911af61ae9ee",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T06:44:59.081792+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T06:44:50.961672+00:00",
+      "run_date": "2025-04-17 06:44:50.961672+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T06:44:50.961672+00:00*\n    Run Date: *2025-04-17 06:44:50.961672+00:00*\n    "
+    }
+  },
+  {
+    "id": "3f466789-d042-4466-93a9-958667067e9d",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T06:43:49.288638+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "debug_slack_notifier",
+      "run_id": null,
+      "run_date": "2025-04-17",
+      "status": "success",
+      "log_url": null,
+      "full_text": "\n    :white_check_mark: Task *print_date* succeeded!  \n    DAG: *debug_slack_notifier*  \n    Run Date: *2025-04-17*  \n    State: *success* :tada:\n    "
+    }
+  },
+  {
+    "id": "f1a6c940-c127-4080-88fe-a3699f493996",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T06:40:01.339696+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "Error in modern_slack_notification_dag: subprocess module not imported. Please add import statement at the beginning of your script and consider using os.system() instead. For example:\nimport os\n\ndef print_date():\n    # Your code here\n    os.system(\"date\")"
+    }
+  },
+  {
+    "id": "509e2dbc-e568-4ecc-8ae5-3d4c85a28465",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T06:35:50.848777+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T06:35:41.868278+00:00",
+      "run_date": "2025-04-17 06:35:41.868278+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T06:35:41.868278+00:00*\n    Run Date: *2025-04-17 06:35:41.868278+00:00*\n    "
+    }
+  },
+  {
+    "id": "3777f64e-6f5b-461f-a702-3e62a8a64e0b",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T06:35:24.623032+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "a1d486f5-e9ea-47a1-9a76-081c96b328d6",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T06:35:09.656912+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "103be240-7d33-4234-a5a4-97ecaba79042",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:52:13.504672+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T05:52:05.843786+00:00",
+      "run_date": "2025-04-17 05:52:05.843786+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T05:52:05.843786+00:00*\n    Run Date: *2025-04-17 05:52:05.843786+00:00*\n    "
+    }
+  },
+  {
+    "id": "6a234dfa-088e-4d51-b072-46569f9a8786",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:48:05.914994+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"error\": \"The subprocess module is not imported, which is required to run the subprocess.run() function.\",\"fix\": \"Add import statement at the top of your Python file: import subprocess or use os.run() if using a recent version of Python (3.4 or later)\",\"dag_name\": \"modern_slack_notification_dag\"}"
+    }
+  },
+  {
+    "id": "5676482f-b8a7-4d4f-85b9-41baab1b744b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:44:47.753463+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T05:44:37.697125+00:00",
+      "run_date": "2025-04-17 05:44:37.697125+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T05:44:37.697125+00:00*\n    Run Date: *2025-04-17 05:44:37.697125+00:00*\n    "
+    }
+  },
+  {
+    "id": "122421a0-d5b0-4e2a-afae-990b04b0df4b",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:36:40.586689+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T05:36:33.558027+00:00",
+      "run_date": "2025-04-17 05:36:33.558027+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T05:36:33.558027+00:00*\n    Run Date: *2025-04-17 05:36:33.558027+00:00*\n    "
+    }
+  },
+  {
+    "id": "b2a1f67d-717a-4a3a-8033-84d882ab1bdd",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:31:46.601007+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"error\": \"The modern_slack_notification_dag has an error. The analysis suggests adding an import statement for the subprocess module at the top of your Python script to fix this issue.\", \"dag_name\": \"modern_slack_notification_dag\"}"
+    }
+  },
+  {
+    "id": "335cbfac-59ce-46d6-9c60-9cb0647b415e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:28:29.359943+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T05:28:20.420339+00:00",
+      "run_date": "2025-04-17 05:28:20.420339+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T05:28:20.420339+00:00*\n    Run Date: *2025-04-17 05:28:20.420339+00:00*\n    "
+    }
+  },
+  {
+    "id": "9b31a4e5-cb8e-40b0-b6a7-519a19483700",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:21:14.814222+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T05:21:07.430526+00:00",
+      "run_date": "2025-04-17 05:21:07.430526+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T05:21:07.430526+00:00*\n    Run Date: *2025-04-17 05:21:07.430526+00:00*\n    "
+    }
+  },
+  {
+    "id": "3b7983bc-af2c-43d5-a63a-f78943fa2022",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:20:59.231649+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "abd30275-b9fd-40d8-bfff-8ff4cd0545fc",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:05:09.266969+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "d0b830ef-7a27-4362-9e71-10227ae97ab4",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:04:07.288827+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "e665d186-2b89-4121-b197-9b63c54b4b42",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T05:00:02.709970+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"dag_name\": \"modern_slack_notification_dag\", \"error_message\": \"Error: Could not decode JSON response from LLM.  Check LLM configuration and prompt.\", \"fix\": \"Import the subprocess module at the top of your script or use the os module instead\"}"
+    }
+  },
+  {
+    "id": "e9d68fac-8b1e-494d-a0e4-9218358769ba",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T04:58:11.415705+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "scheduled__2025-04-16T00:00:00+00:00",
+      "run_date": "2025-04-16 00:00:00+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *scheduled__2025-04-16T00:00:00+00:00*\n    Run Date: *2025-04-16 00:00:00+00:00*\n    "
+    }
+  },
+  {
+    "id": "6f23cfac-e9cd-4a2b-8bb3-6039f78b76be",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-17T04:54:51.097760+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-17T04:54:43.422569+00:00",
+      "run_date": "2025-04-17 04:54:43.422569+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-17T04:54:43.422569+00:00*\n    Run Date: *2025-04-17 04:54:43.422569+00:00*\n    "
+    }
+  },
+  {
+    "id": "e816e5c5-58ec-4303-8322-8c743b8879c6",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T09:29:27.622676+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"text\": \"Error in modern_slack_notification_dag: subprocess module not imported\", \"dag_name\": \"modern_slack_notification_dag\"}"
+    }
+  },
+  {
+    "id": "64c0d589-bd3a-4d44-9921-43a92220c6c5",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T09:25:14.794091+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T09:25:03.539153+00:00",
+      "run_date": "2025-04-16 09:25:03.539153+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T09:25:03.539153+00:00*\n    Run Date: *2025-04-16 09:25:03.539153+00:00*\n    "
+    }
+  },
+  {
+    "id": "b64ee140-a668-49d8-bd47-f982ccb11c95",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T09:14:20.893715+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hello"
+    }
+  },
+  {
+    "id": "ed81814b-4ec6-4305-8f79-76d129fe4194",
+    "user": null,
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:47:38.584208+00:00",
+    "subtype": "message_deleted",
+    "text_details": {
+      "error": "'NoneType' object has no attribute 'strip'",
+      "full_text": null
+    }
+  },
+  {
+    "id": "ed8eb8d8-6622-43d9-8432-07ee5e09b49a",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:43:16.276720+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T08:42:00.010798+00:00",
+      "run_date": "2025-04-16 08:42:00.010798+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T08:42:00.010798+00:00*\n    Run Date: *2025-04-16 08:42:00.010798+00:00*\n    "
+    }
+  },
+  {
+    "id": "a6e15241-c43b-4ba2-92f8-0bb46b08ee69",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:42:46.781241+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T08:42:33.865910+00:00",
+      "run_date": "2025-04-16 08:42:33.865910+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T08:42:33.865910+00:00*\n    Run Date: *2025-04-16 08:42:33.865910+00:00*\n    "
+    }
+  },
+  {
+    "id": "cd0d8675-2c53-410d-913d-c02733c14793",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:36:31.211234+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"error\": \"The issue here is that subprocess is not imported in your Python script.\nTo fix this, you need to add an import statement at the top of your script:\nimport subprocess\nThis will allow you to use the subprocess.run() function without any errors.\nAlternatively, you can also use os.system() instead of subprocess.run(), but subprocess is generally a more robust and flexible way to execute system commands.\nAlso, make sure that the script has the necessary permissions to run the date command. If it doesn't have the necessary permissions, you'll get an error even if the import statement is correct.\"}"
+    }
+  },
+  {
+    "id": "7f2972c3-ac64-40dc-8761-bcd1db2d6cc4",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:32:47.162547+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T08:32:37.563235+00:00",
+      "run_date": "2025-04-16 08:32:37.563235+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T08:32:37.563235+00:00*\n    Run Date: *2025-04-16 08:32:37.563235+00:00*\n    "
+    }
+  },
+  {
+    "id": "fc4ad87d-af7a-44bd-9819-364f059cec5e",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:22:56.519630+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T08:22:45.986603+00:00",
+      "run_date": "2025-04-16 08:22:45.986603+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T08:22:45.986603+00:00*\n    Run Date: *2025-04-16 08:22:45.986603+00:00*\n    "
+    }
+  },
+  {
+    "id": "8699458e-3ab4-47cb-9d92-5b7c1924a206",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:21:39.357805+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "Error in modern_slack_notification_dag: subprocess module not imported. Check Python script for import statement."
+    }
+  },
+  {
+    "id": "fca42803-9a19-4704-8c11-0494d11d5149",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T08:17:14.555673+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T08:17:03.369367+00:00",
+      "run_date": "2025-04-16 08:17:03.369367+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T08:17:03.369367+00:00*\n    Run Date: *2025-04-16 08:17:03.369367+00:00*\n    "
+    }
+  },
+  {
+    "id": "fd7f60c8-f613-4b3e-8a29-2da6d2ed8af5",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T06:59:42.227895+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T06:59:29.888332+00:00",
+      "run_date": "2025-04-16 06:59:29.888332+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T06:59:29.888332+00:00*\n    Run Date: *2025-04-16 06:59:29.888332+00:00*\n    "
+    }
+  },
+  {
+    "id": "a16d6239-304a-4d61-a961-7faa9a28992f",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T05:02:23.403609+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{\"dag_name\": \"modern_slack_notification_dag\", \"error_message\": \"The error message indicates that the subprocess module is not imported in the script, which is causing a NameError. To fix this issue, you need to add an import statement for the subprocess module at the top of your Python file.\", \"fix\": \"Try adding the following import statement: try: import subprocess except ImportError: from __builtin__ import subprocess\"}"
+    }
+  },
+  {
+    "id": "de33d864-1ca9-4553-8fc3-083de10986b3",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:59:00.031482+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T04:58:50.111866+00:00",
+      "run_date": "2025-04-16 04:58:50.111866+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T04:58:50.111866+00:00*\n    Run Date: *2025-04-16 04:58:50.111866+00:00*\n    "
+    }
+  },
+  {
+    "id": "f93a730b-68dc-4995-915a-15ea0b4e0a7a",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:57:06.268214+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "{"
+    }
+  },
+  {
+    "id": "b59057c7-7711-47ea-b155-bfe7271873b3",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:53:57.963917+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T04:53:48.668971+00:00",
+      "run_date": "2025-04-16 04:53:48.668971+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T04:53:48.668971+00:00*\n    Run Date: *2025-04-16 04:53:48.668971+00:00*\n    "
+    }
+  },
+  {
+    "id": "ac18d8c5-ae84-44ee-941c-03e8c20310be",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:51:47.977754+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T04:51:38.648650+00:00",
+      "run_date": "2025-04-16 04:51:38.648650+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T04:51:38.648650+00:00*\n    Run Date: *2025-04-16 04:51:38.648650+00:00*\n    "
+    }
+  },
+  {
+    "id": "6dd7d76b-e544-48e4-9da2-7980b36eebad",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:48:09.539401+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "manual__2025-04-16T04:47:52.861207+00:00",
+      "run_date": "2025-04-16 04:47:52.861207+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *manual__2025-04-16T04:47:52.861207+00:00*\n    Run Date: *2025-04-16 04:47:52.861207+00:00*\n    "
+    }
+  },
+  {
+    "id": "1d8b2c61-3ce4-41fa-b767-27268c8765b0",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:32:07.293341+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "3f55e608-3c6a-4a66-a869-459422b3abbe",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:31:33.294375+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "b44278b1-7831-4b29-8f9b-fb1f0468e5e1",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:31:22.070364+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "618c6990-645d-447e-9d03-4901dbb626b0",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:30:36.684033+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "d90fa0e1-948d-42d8-a72d-a3f3bd9c0a9e",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:29:52.396004+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
+    "id": "0127d63d-e8eb-4954-a33f-f39c625b1ee2",
+    "user": "U08MVBRBM9S",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:27:52.897097+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": "modern_slack_notification_dag",
+      "run_id": "scheduled__2025-04-15T00:00:00+00:00",
+      "run_date": "2025-04-15 00:00:00+00:00",
+      "status": "failed",
+      "log_url": null,
+      "full_text": "\n    :red_circle: DAG *modern_slack_notification_dag* failed!\n    Run ID: *scheduled__2025-04-15T00:00:00+00:00*\n    Run Date: *2025-04-15 00:00:00+00:00*\n    "
+    }
+  },
+  {
+    "id": "b4afcd0c-9acd-4864-b208-9f2d157f5bcb",
+    "user": "U08MWB5HJV7",
+    "channel": "C08MAV0NK71",
+    "timestamp": "2025-04-16T04:26:49.194957+00:00",
+    "subtype": "user",
+    "text_details": {
+      "dag_name": null,
+      "run_id": null,
+      "run_date": null,
+      "status": null,
+      "log_url": null,
+      "full_text": "hii"
+    }
+  },
+  {
     "id": "b8336256-0ae3-405d-b107-75de058b8c77",
     "user": "U08MVBRBM9S",
     "channel": "C08MAV0NK71",

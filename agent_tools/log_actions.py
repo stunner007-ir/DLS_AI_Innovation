@@ -11,23 +11,23 @@ AIRFLOW_URL = "http://localhost:8080"
 USERNAME = "airflow"
 PASSWORD = "airflow"
 
-def fetch_dags() -> list:
-    url = f"{AIRFLOW_URL}/api/v1/dags"
-    try:
-        response = requests.get(url, auth=(USERNAME, PASSWORD))
-        response.raise_for_status()
-        data = response.json()
-        # Return a list of dictionaries containing dag_id and dag_name
-        return [
-            {
-                "dag_id": dag.get("dag_id", "unknown"),
-                "dag_name": dag.get("dag_display_name", "unknown"),
-            }
-            for dag in data.get("dags", [])
-        ]
-    except Exception as e:
-        print(f"Error fetching DAGs: {e}")
-        return []
+# def fetch_dags() -> list:
+#     url = f"{AIRFLOW_URL}/api/v1/dags"
+#     try:
+#         response = requests.get(url, auth=(USERNAME, PASSWORD))
+#         response.raise_for_status()
+#         data = response.json()
+#         # Return a list of dictionaries containing dag_id and dag_name
+#         return [
+#             {
+#                 "dag_id": dag.get("dag_id", "unknown"),
+#                 "dag_name": dag.get("dag_display_name", "unknown"),
+#             }
+#             for dag in data.get("dags", [])
+#         ]
+#     except Exception as e:
+#         print(f"Error fetching DAGs: {e}")
+#         return []
 
 
 def fetch_logs_for_dag(dag_id: str) -> dict:
@@ -78,14 +78,14 @@ def fetch_logs_for_dag(dag_id: str) -> dict:
         return {}
 
 
-# Example usage
-if __name__ == "__main__":
-    dags = fetch_dags()
-    if dags:
-        # Example: Fetch logs for a specific DAG ID
-        dag_id = dags[0]["dag_id"]  # Get the first DAG ID for demonstration
-        logs = fetch_logs_for_dag(dag_id)
-        print(f"Logs for DAG ID '{dag_id}':", logs)
+# # Example usage
+# if __name__ == "__main__":
+#     dags = fetch_dags()
+#     if dags:
+#         # Example: Fetch logs for a specific DAG ID
+#         dag_id = dags[0]["dag_id"]  # Get the first DAG ID for demonstration
+#         logs = fetch_logs_for_dag(dag_id)
+#         print(f"Logs for DAG ID '{dag_id}':", logs)
 
-    else:
-        print("No DAGs fetched. Exiting.")
+#     else:
+#         print("No DAGs fetched. Exiting.")

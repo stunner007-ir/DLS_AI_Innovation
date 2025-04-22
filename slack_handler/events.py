@@ -12,6 +12,8 @@ from agent_handler.handler import agent
 from slack_handler.utils import load_existing_events, save_as_json, parse_slack_text
 from slack_handler.verifier import verify_slack_signature
 
+logging.basicConfig(level=logging.INFO)
+
 logger = logging.getLogger(__name__)
 slack_events = APIRouter()
 
@@ -38,6 +40,9 @@ async def handle_slack_event(request: Request):
 
     event = data.get("event")
 
+    # print("Event data:")
+    # print(json.dumps(event, indent=2))
+
     # Check if the event is a message
     if event and event.get("type") == "message":
         user = event.get("user")
@@ -56,10 +61,15 @@ async def handle_slack_event(request: Request):
             "subtype": subtype,
             "text_details": parsed_text,
         }
+        # print("Message data:")
+        # print(json.dumps(message_data, indent=2))  # Log the message data
 
         # Duplicate Check Logic
-        dag_name = parsed_text.get("dag_name")
-        run_date = parsed_text.get("run_date")
+        # dag_name = parsed_text.get("dag_name")
+        # run_date = parsed_text.get("run_date")
+
+        dag_name = message_data.get("text_details", {}).get("dag_name")
+        run_date = message_data.get("text_details", {}).get("run_date")
 
         if dag_name and run_date:
             existing_events = load_existing_events(SLACK_RESPONSE_FILE)
@@ -88,8 +98,6 @@ async def handle_slack_event(request: Request):
             logger.info(
                 "Incoming Slack Message: %s", json.dumps(message_data, indent=2)
             )  # Log if dag_name or run_date is missing
-        print("Incoming Slack Message:")
-        print(json.dumps(message_data, indent=2))
 
         # Save the message (if not a duplicate or if dag_name/run_date are missing)
         existing_events = load_existing_events(SLACK_RESPONSE_FILE)
@@ -97,24 +105,45 @@ async def handle_slack_event(request: Request):
         save_as_json(existing_events, SLACK_RESPONSE_FILE)
 
         # Agent Trigger Logic (only if DAG failed and not a duplicate)
-        if parsed_text.get("status") == "failed" and dag_name:
+        if message_data.get("text_details", {}).get("status") == "failed" and dag_name:
+            # if message_data.get("status") == "failed" and dag_name:
+            # if parsed_text.get("status") == "failed" and dag_name:
             logger.info(f"DAG failure detected: {dag_name}")
             try:
-                # First, fetch the logs
+                # Fetch the DaG details
+                print("Fetching DAG details...")
+                dag_details = await asyncio.to_thread(
+                    agent,
+                    f"Use the DAG Details Fetching Tool to get information for the DAG named '{dag_name}'.",
+                )
+
+                logger.info(f"DAG details fetched: {json.dumps(dag_details, indent=2)}")
+
+                # print("Saving DAG details to JSON...")
+                # save_dag_details_result = await asyncio.to_thread(
+                #     agent,
+                #     f"Now save the fetched DAG details to a JSON file. This is the DAG details: {dag_details}",
+                # )
+
+                # logger.info(f"DAG details saved to JSON: {save_dag_details_result}")
                 print("Fetching logs...")
-                logs = await asyncio.to_thread(agent, f"fetch logs for dag {dag_name}")
+                logs = await asyncio.to_thread(
+                    agent,
+                    f"Use the Log Fetching Tool to get logs for the DAG '{dag_name}'.",
+                )
 
                 # Then, analyze the logs
                 print("Analyzing logs...")
                 analysis = await asyncio.to_thread(
-                    agent, f"analyze logs for dag {logs}"
+                    agent,
+                    f"Use the Log Analysis Tool. Analyze these logs for DAG '{dag_name}' and give a summary: {logs}",
                 )
 
                 # Send the analysis to Slack
                 print("Sending analysis to Slack...")
                 slack_message_result = await asyncio.to_thread(
                     agent,
-                    f"The DAG named '{dag_name}' has an error. The analysis for resolving the error is: '{analysis}'. Should I send a Slack notification?",
+                    f"Send a Slack message about an error in DAG '{dag_name}'. Use this analysis: {analysis}",
                 )
 
             except Exception as e:
@@ -127,6 +156,7 @@ async def handle_slack_event(request: Request):
                 "id": str(uuid.uuid4()),
                 "dag_name": dag_name,
                 "timestamp": timestamp,
+                "dag_details": dag_details,
                 "logs": logs,
                 "analysis": analysis,
                 "slack_message_result": slack_message_result,
@@ -140,6 +170,7 @@ async def handle_slack_event(request: Request):
                 content={
                     "status": "ok",
                     "message": f"Fetched logs and analysis for {dag_name}",
+                    "dag_details": dag_details,
                     "logs": logs,
                     "analysis": analysis,
                     "slack_message_result": slack_message_result,

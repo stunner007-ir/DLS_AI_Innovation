@@ -6,6 +6,7 @@ import re
 
 logger = logging.getLogger(__name__)
 
+
 def load_existing_events(filename: str):
     if os.path.exists(filename):
         try:
@@ -14,6 +15,7 @@ def load_existing_events(filename: str):
         except Exception as e:
             logger.error(f"Failed to read {filename}: {e}")
     return []
+
 
 def save_as_json(data, filename: str):
     try:
@@ -24,44 +26,69 @@ def save_as_json(data, filename: str):
 
 
 def parse_slack_text(text: str) -> Dict:
-    """Parses Slack message text and extracts Airflow alert info."""
+    """Parses Slack message text and extracts Airflow alert info for both DAG and Task failures."""
     try:
         # Normalize text: remove leading/trailing whitespace
         cleaned_text = text.strip()
 
-        # Extract DAG name
-        dag_name_match = re.search(r"(?:DAG:|DAG) \*(.*?)\*", cleaned_text)
-        dag_name = dag_name_match.group(1) if dag_name_match else None
+        # Determine if it's a DAG failure or a Task failure based on the text content
+        is_task_failure = "Task" in cleaned_text
 
-        # Extract Run ID
-        run_id_match = re.search(r"Run ID: \*(.*?)\*", cleaned_text)
-        run_id = run_id_match.group(1) if run_id_match else None
+        if is_task_failure:
+            # Extract Task Name
+            task_name_match = re.search(r"Task \*(.*?)\* failed", cleaned_text)
+            task_name = task_name_match.group(1) if task_name_match else None
 
-        # Extract Run Date
-        run_date_match = re.search(r"Run Date: \*(.*?)\*", cleaned_text)
-        run_date = run_date_match.group(1) if run_date_match else None
+            # Extract DAG name
+            dag_name_match = re.search(r"DAG: \*(.*?)\*", cleaned_text)
+            dag_name = dag_name_match.group(1) if dag_name_match else None
 
-        # Extract Status (based on presence of "failed!" or "succeeded!")
-        status = None  # Default to None
-        if "failed" in cleaned_text.lower():
-            status = "failed"
-        elif "success" in cleaned_text.lower() or "succeeded" in cleaned_text.lower():
-            status = "success"
+            # Extract Run Date
+            run_date_match = re.search(r"Run Date: \*(.*?)\*", cleaned_text)
+            run_date = run_date_match.group(1) if run_date_match else None
 
-        # Extract Log URL
-        log_url_match = re.search(r"\*Log URL:\* <(.*?)>", cleaned_text)
-        log_url = log_url_match.group(1) if log_url_match else None
+            # Extract Status
+            status = "failed"  # Task failures are always 'failed' in this context
 
-        return {
-            "dag_name": dag_name,
-            "run_id": run_id,
-            "run_date": run_date,
-            "status": status,
-            "log_url": log_url,
-            "full_text": text,  # include original message for logging/reference
-        }
+            # Extract Log URL
+            log_url_match = re.search(r"Log URL:\*<(.*?)>", cleaned_text)
+            log_url = log_url_match.group(1) if log_url_match else None
+
+            return {
+                "dag_name": dag_name,
+                "task_name": task_name,
+                "run_date": run_date,
+                "status": status,
+                "log_url": log_url,
+                "full_text": text,  # include original message for logging/reference
+                "type": "task_failure",
+            }
+        else:
+            # DAG Failure Parsing
+            # Extract DAG name
+            dag_name_match = re.search(r"DAG \*(.*?)\* failed", cleaned_text)
+            dag_name = dag_name_match.group(1) if dag_name_match else None
+
+            # Extract Run ID
+            run_id_match = re.search(r"Run ID: \*(.*?)\*", cleaned_text)
+            run_id = run_id_match.group(1) if run_id_match else None
+
+            # Extract Run Date
+            run_date_match = re.search(r"Run Date: \*(.*?)\*", cleaned_text)
+            run_date = run_date_match.group(1) if run_date_match else None
+
+            # Extract Status (based on presence of "failed!" or "succeeded!")
+            status = "failed"  # DAG failures are always failed in this context
+
+            return {
+                "dag_name": dag_name,
+                "run_id": run_id,
+                "run_date": run_date,
+                "status": status,
+                "full_text": text,  # include original message for logging/reference
+                "type": "dag_failure",
+            }
 
     except Exception as e:
         logger.error(f"Error parsing Slack text: {e}")
         return {"error": str(e), "full_text": text}
-
